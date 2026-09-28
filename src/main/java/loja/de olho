@@ -1,0 +1,6 @@
+agora que entendi como funciona completamente o static
+
+ele pertece à uma classe e não cada objeto criado
+
+ou seja, se eu tiver um atributo static, uma constante, significa que aquilo não irá mudar
+e nem será instanciando de um objeto no main
