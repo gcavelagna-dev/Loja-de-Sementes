@@ -9,7 +9,7 @@ public class Moeda {
     private static final int MAX = 300;
     private static final int MIN = 0 ;
 
-    public Moeda(){
+    public Moeda(int ouro){
         setOuro(ouro);
     }
 
