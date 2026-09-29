@@ -7,7 +7,7 @@ public class Moeda {
 
     private int ouro;
     private static final int MIN = 0 ;
-    private static final int MAX = 300;
+    private static final int MAX = 400;
 
     public Moeda(int ouro){//para receber um valor e determinar como Moeda
         setOuro(ouro);

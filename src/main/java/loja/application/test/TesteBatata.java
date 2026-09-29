@@ -1,4 +1,4 @@
-package main.java.loja.cliente.application.test;
+package main.java.loja.application.test;
 
 import main.java.loja.sementes.primavera.Batata;
 

@@ -1,4 +1,28 @@
 package main.java.loja.sementes.verao;
 
-public class Mirtilo {
+import main.java.loja.domain.Moeda;
+import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Semente;
+
+public class Mirtilo extends Semente {
+
+    private static final int valorSemente = 80;
+
+    public Mirtilo(){
+        super(Estacao.VERAO, new Moeda(valorSemente));
+    }
+
+    static {
+        Mirtilo mirtilo = new Mirtilo();
+        System.out.println(mirtilo);
+    }
+
+    @Override
+    public String toString(){
+        return "Mirtilo: "+ getValorSemente() + " ouros | Estação: " + Estacao.VERAO;
+    }
+
+    public int getValorSemente() {
+        return valorSemente;
+    }
 }
