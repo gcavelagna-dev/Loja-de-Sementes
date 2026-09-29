@@ -6,22 +6,23 @@ import main.java.loja.sementes.Semente;
 
 public class Batata extends Semente {
 
-    private static final Moeda moeda = new Moeda(40);
+    private static final int valorSemente = 50;
 
     public Batata(){
-        super(Estacao.PRIMAVERA);
-        moeda.setOuro(40);
+        super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
-//está só aparecendo a estação, a moeda ainda está = 0;
-    static{
+    static {
         Batata batata = new Batata();
-        System.out.println(batata.toString());
+        System.out.println(batata);
+
     }
 
     @Override
     public String toString(){
-        return "Batata: " + moeda.getOuro() + " ouros | Estação: " + Estacao.PRIMAVERA;
+        return "Batata: "+ getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
     }
 
-
+    public int getValorSemente(){
+        return valorSemente;
+    }
 }
