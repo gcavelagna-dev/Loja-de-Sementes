@@ -1,7 +1,7 @@
 package main.java.loja.domain;
 
-import main.java.loja.shared.exceptions.moeda.MoedaValorAltoException;
-import main.java.loja.shared.exceptions.moeda.MoedaValorNegativoException;
+import main.java.loja.shared.exceptions.domain.moeda.MoedaValorAltoException;
+import main.java.loja.shared.exceptions.domain.moeda.MoedaValorNegativoException;
 
 public class Moeda {
 
