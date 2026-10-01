@@ -8,7 +8,7 @@ public class MelaoPoeira extends Semente {
 
     private static final int valorSemente = 10;
 
-    public MelaoPoeira(){
+    public MelaoPoeira() {
         super(Estacao.INVERNO, new Moeda(valorSemente));
     }
 
@@ -18,8 +18,8 @@ public class MelaoPoeira extends Semente {
     }
 
     @Override
-    public String toString(){
-        return "Melão-Poeira: "+ getValorSemente() + " ouros | Estação: " + Estacao.INVERNO;
+    public String toString() {
+        return "Melão-Poeira: " + getValorSemente() + " ouros | Estação: " + Estacao.INVERNO;
     }
 
     public int getValorSemente() {

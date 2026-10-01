@@ -8,7 +8,7 @@ public class Morango extends Semente {
 
     private static final int valorSemente = 100;
 
-    public Morango(){
+    public Morango() {
         super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
 
@@ -18,11 +18,11 @@ public class Morango extends Semente {
     }
 
     @Override
-    public String toString(){
-        return "Morango: "+ getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
+    public String toString() {
+        return "Morango: " + getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
     }
 
-    public int getValorSemente(){
+    public int getValorSemente() {
         return valorSemente;
     }
 }

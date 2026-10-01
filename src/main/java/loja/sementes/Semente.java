@@ -9,14 +9,14 @@ public abstract class Semente {
     private final Estacao estacao; //não tem static porque eu teria que definir uma estação em cada classe
     private final Moeda preco;
 
-    protected Semente(Estacao estacao,Moeda preco) {
+    protected Semente(Estacao estacao, Moeda preco) {
         this.estacao = estacao;
         this.preco = preco;
 
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return estacao.toString();
     }
 

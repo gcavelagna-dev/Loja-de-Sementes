@@ -10,15 +10,16 @@ public enum Estacao {
     private final int codigo;
 
     //construtor package ou privado(Que já é por natureza implicito privado)
-    Estacao(String descricao, int codigo){
+    Estacao(String descricao, int codigo) {
         this.descricao = descricao;
         this.codigo = codigo;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.descricao;
     }
+
     public String getDescricao() {
         return descricao;
     }

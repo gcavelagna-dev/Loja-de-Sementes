@@ -47,7 +47,6 @@ public class TestandoHashMap {
         System.out.println(estoque);
 
 
-
         //usando terminal do Intellij e usando comando tree, dá para ver a estrutura completa
 
     }

@@ -8,8 +8,8 @@ public class Chirivia extends Semente {
 
     private static final int valorSemente = 20;
 
-    public Chirivia(){
-        super(Estacao.PRIMAVERA, new Moeda(valorSemente) );
+    public Chirivia() {
+        super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
 
     static {
@@ -18,11 +18,11 @@ public class Chirivia extends Semente {
     }
 
     @Override
-    public String toString(){
-        return "Chirívia: "+ getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
+    public String toString() {
+        return "Chirívia: " + getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
     }
 
-    public int getValorSemente(){
+    public int getValorSemente() {
         return valorSemente;
     }
 }

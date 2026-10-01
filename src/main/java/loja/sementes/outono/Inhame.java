@@ -8,7 +8,7 @@ public class Inhame extends Semente {
 
     private static final int valorSemente = 60;
 
-    public Inhame(){
+    public Inhame() {
         super(Estacao.OUTONO, new Moeda(valorSemente));
     }
 
@@ -18,8 +18,8 @@ public class Inhame extends Semente {
     }
 
     @Override
-    public String toString(){
-        return "Inhame: "+ getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;
+    public String toString() {
+        return "Inhame: " + getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;
     }
 
     public int getValorSemente() {

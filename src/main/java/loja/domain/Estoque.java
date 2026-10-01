@@ -16,26 +16,34 @@ public class Estoque {
     private static final int MIN = 0;
     private static final int MAX = 500;
 
-    public Estoque(){
-//        |estoque.add|(validarQuantidade(Object semente, Integer quantidadadeDesejada));
+    public Estoque() {
     }
 
-    public void validarQuantidade(Object semente, Integer quantidadeDesejada){
+    @Override
+    public String toString() {
+        return "";
+    }
+
+    public void validarQuantidade(Object semente, Integer quantidadeDesejada) {
         Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
 
-        if (quantidadeDesejada == null){
+        if (quantidadeDesejada == null) {
             throw new IntegerNullException("Erro: Integer está nulo.");
         }
-        if (quantidadeDesejada < MIN){
+        if (quantidadeDesejada < MIN) {
             throw new IntegerNegativoException("Erro: O número do Integer está negativa: " + quantidadeDesejada);
         }
-        if (quantidadeDesejada > MAX){
+        if (quantidadeDesejada > MAX) {
             throw new IntegerEstoqueAcimaException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + MAX);
         }
         estoque.put(semente, quantidadeDesejada);
     }
 
-    public void adicionarMap(Map(Object semente, Integer integer))
+    public void adicionar() {
+
+
+    }
+
     public Map<Object, Integer> getEstoque() {
         return Collections.unmodifiableMap(estoque);//devolve a cópia
     }
