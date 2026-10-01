@@ -12,10 +12,6 @@ public class Mirtilo extends Semente {
         super(Estacao.VERAO, new Moeda(valorSemente));
     }
 
-    static {
-        Mirtilo mirtilo = new Mirtilo();
-        System.out.println(mirtilo);
-    }
 
     @Override
     public String toString(){

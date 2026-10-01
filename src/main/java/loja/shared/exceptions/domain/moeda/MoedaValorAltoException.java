@@ -1,4 +1,4 @@
-package main.java.loja.shared.exceptions.moeda;
+package main.java.loja.shared.exceptions.domain.moeda;
 
 public class MoedaValorAltoException extends MoedaException {
     public MoedaValorAltoException(String message) {

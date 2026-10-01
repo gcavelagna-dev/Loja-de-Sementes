@@ -8,21 +8,16 @@ public class Oxicoco extends Semente {
 
     private static final int valorSemente = 240;
 
-    public Oxicoco(){
+    public Oxicoco() {
         super(Estacao.OUTONO, new Moeda(valorSemente));
     }
 
-    static {
-        Oxicoco oxicoco = new Oxicoco();
-        System.out.println(oxicoco);
-    }
-
     @Override
-    public String toString(){
-        return "Oxicoco: "+ getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;
+    public String toString() {
+        return "Oxicoco: " + getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;
     }
 
-    public int getValorSemente(){
+    public int getValorSemente() {
         return valorSemente;
     }
 }

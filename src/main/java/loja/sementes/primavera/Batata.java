@@ -8,21 +8,17 @@ public class Batata extends Semente {
 
     private static final int valorSemente = 50;
 
-    public Batata(){
+    public Batata() {
         super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
-    static {
-        Batata batata = new Batata();
-        System.out.println(batata);
 
-    }
 
     @Override
-    public String toString(){
-        return "Batata: "+ getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
+    public String toString() {
+        return "Batata: " + getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
     }
 
-    public int getValorSemente(){
+    public int getValorSemente() {
         return valorSemente;
     }
 }
