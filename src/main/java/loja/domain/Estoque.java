@@ -1,5 +1,6 @@
 package main.java.loja.domain;
 
+import main.java.loja.sementes.Semente;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerEstoqueAcimaException;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerNegativoException;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerNullException;
@@ -12,7 +13,7 @@ import java.util.Map;
 public class Estoque {
 
     private ArrayList<Map> estoqueMap = new ArrayList<>();
-    private final Map<Object, Integer> estoque = new HashMap<>();
+    private final Map<Semente, Integer> estoque = new HashMap<>();
     private static final int MIN = 0;
     private static final int MAX = 500;
 
@@ -24,7 +25,7 @@ public class Estoque {
         return "";
     }
 
-    public void validarQuantidade(Object semente, Integer quantidadeDesejada) {
+    public void validarQuantidade(Semente semente, Integer quantidadeDesejada) {
         Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
 
         if (quantidadeDesejada == null) {
@@ -36,15 +37,16 @@ public class Estoque {
         if (quantidadeDesejada > MAX) {
             throw new IntegerEstoqueAcimaException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + MAX);
         }
-        estoque.put(semente, quantidadeDesejada);
     }
 
-    public void adicionar() {
+    public void adicionar(Semente semente, Integer quantidade) {
+        validarQuantidade(semente, quantidade);
+        int qtdSemente = estoque.get(semente);
 
 
     }
 
-    public Map<Object, Integer> getEstoque() {
+    public Map<Semente, Integer> getEstoque() {
         return Collections.unmodifiableMap(estoque);//devolve a cópia
     }
 

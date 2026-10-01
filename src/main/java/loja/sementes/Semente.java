@@ -17,7 +17,7 @@ public abstract class Semente {
 
     @Override
     public String toString() {
-        return estacao.toString();
+        return "Não faça isso...";
     }
 
     public Estacao getEstacao() {

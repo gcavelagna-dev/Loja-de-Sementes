@@ -9,6 +9,7 @@ public class Carambola extends Semente {
 
     private static final int valorSemente = 400;
 
+
     public Carambola(){
         super(Estacao.VERAO, new Moeda(valorSemente));
     }
