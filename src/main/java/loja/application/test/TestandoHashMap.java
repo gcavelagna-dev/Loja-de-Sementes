@@ -1,6 +1,6 @@
 package main.java.loja.application.test;
 
-import main.java.loja.domain.Estoque;
+import main.java.loja.domain.loja.Estoque;
 import main.java.loja.sementes.outono.Abobora;
 import main.java.loja.sementes.primavera.Batata;
 

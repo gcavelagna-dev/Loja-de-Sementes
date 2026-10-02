@@ -12,11 +12,6 @@ public class Inhame extends Semente {
         super(Estacao.OUTONO, new Moeda(valorSemente));
     }
 
-    static {
-        Inhame inhame = new Inhame();
-        System.out.println(inhame);
-    }
-
     @Override
     public String toString() {
         return "Inhame: " + getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;

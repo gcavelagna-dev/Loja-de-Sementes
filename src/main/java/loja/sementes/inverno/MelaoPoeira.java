@@ -12,10 +12,7 @@ public class MelaoPoeira extends Semente {
         super(Estacao.INVERNO, new Moeda(valorSemente));
     }
 
-    static {
-        MelaoPoeira melaoPoeira = new MelaoPoeira();
-        System.out.println(melaoPoeira);
-    }
+
 
     @Override
     public String toString() {

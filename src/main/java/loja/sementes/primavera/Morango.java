@@ -12,10 +12,6 @@ public class Morango extends Semente {
         super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
 
-    static {
-        Morango morango = new Morango();
-        System.out.println(morango);
-    }
 
     @Override
     public String toString() {

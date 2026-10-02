@@ -12,11 +12,6 @@ public class Batata extends Semente {
         super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
 
-    static {
-        Batata batata = new Batata();
-        System.out.println(batata);
-
-    }
 
     @Override
     public String toString() {

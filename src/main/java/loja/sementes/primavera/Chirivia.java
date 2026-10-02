@@ -12,10 +12,6 @@ public class Chirivia extends Semente {
         super(Estacao.PRIMAVERA, new Moeda(valorSemente));
     }
 
-    static {
-        Chirivia chirivia = new Chirivia();
-        System.out.println(chirivia);
-    }
 
     @Override
     public String toString() {

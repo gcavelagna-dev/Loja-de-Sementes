@@ -12,10 +12,6 @@ public class Abobora extends Semente {
         super(Estacao.OUTONO, new Moeda(valorSemente));
     }
 
-    static {
-        Abobora abobora = new Abobora();
-        System.out.println(abobora);
-    }
 
     @Override
     public String toString() {

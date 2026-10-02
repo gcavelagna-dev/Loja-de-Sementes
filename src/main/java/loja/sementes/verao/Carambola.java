@@ -14,10 +14,6 @@ public class Carambola extends Semente {
         super(Estacao.VERAO, new Moeda(valorSemente));
     }
 
-    static {
-        Carambola carambola = new Carambola();
-        System.out.println(carambola);
-    }
 
     @Override
     public String toString(){

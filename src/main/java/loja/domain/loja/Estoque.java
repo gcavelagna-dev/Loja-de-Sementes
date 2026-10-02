@@ -1,10 +1,7 @@
-package main.java.loja.domain;
+package main.java.loja.domain.loja;
 
 import main.java.loja.sementes.Semente;
-import main.java.loja.shared.exceptions.domain.estoque.IntegerEstoqueAcimaException;
-import main.java.loja.shared.exceptions.domain.estoque.IntegerNegativoException;
-import main.java.loja.shared.exceptions.domain.estoque.IntegerNullException;
-import main.java.loja.shared.exceptions.domain.estoque.IntegerRemocaoException;
+import main.java.loja.shared.exceptions.domain.estoque.*;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -21,7 +18,15 @@ public class Estoque {
 
     @Override
     public String toString() {
-        return "";
+        return "\nEstoque: " +
+                estoque +
+                "\n";
+    }
+
+    public void exibirEstoque() {
+        for (Map.Entry<Semente, Integer> entrada : estoque.entrySet()) {
+            System.out.println(entrada.getKey() + " | Quantidade: " + entrada.getValue());
+        }
     }
 
     public void adicionar(Semente semente, Integer quantidade) {
@@ -36,21 +41,25 @@ public class Estoque {
 
     }
 
-    public void remover(Semente semente, Integer quantidade){
+    public void remover(Semente semente, Integer quantidade) {
 
         validarQuantidade(quantidade);
 
-
-        Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
-        Integer quantidadeFinal = quantidadeAtual - quantidade;
         if (quantidade < MIN) {
             throw new IntegerRemocaoException("Erro: Remoção de número negativo");
         }
+        Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
+
+        if (quantidadeAtual < quantidade){
+            throw new QuantidadeNegativaException("Erro: Estoque quantidade negativa maior que quantidade atual.");
+        }
+
+        Integer quantidadeFinal = quantidadeAtual - quantidade;
         estoque.put(semente, quantidadeFinal);
 
     }
 
-    public boolean temSemente(Semente semente){
+    public boolean temSemente(Semente semente) {
         //implementar que se tiver 0, ficar aparente no estoque
         return estoque.getOrDefault(semente, MIN) > 0;
     }
