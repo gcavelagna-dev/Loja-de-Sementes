@@ -4,15 +4,14 @@ import main.java.loja.sementes.Semente;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerEstoqueAcimaException;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerNegativoException;
 import main.java.loja.shared.exceptions.domain.estoque.IntegerNullException;
+import main.java.loja.shared.exceptions.domain.estoque.IntegerRemocaoException;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Estoque {
 
-    private ArrayList<Map> estoqueMap = new ArrayList<>();
     private final Map<Semente, Integer> estoque = new HashMap<>();
     private static final int MIN = 0;
     private static final int MAX = 500;
@@ -25,8 +24,38 @@ public class Estoque {
         return "";
     }
 
-    public void validarQuantidade(Semente semente, Integer quantidadeDesejada) {
+    public void adicionar(Semente semente, Integer quantidade) {
+        validarQuantidade(quantidade);
+
         Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
+        Integer quantidadeFinal = quantidadeAtual + quantidade;
+
+        validarQuantidade(quantidadeFinal);
+
+        estoque.put(semente, quantidade);
+
+    }
+
+    public void remover(Semente semente, Integer quantidade){
+
+        validarQuantidade(quantidade);
+
+
+        Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
+        Integer quantidadeFinal = quantidadeAtual - quantidade;
+        if (quantidade < MIN) {
+            throw new IntegerRemocaoException("Erro: Remoção de número negativo");
+        }
+        estoque.put(semente, quantidadeFinal);
+
+    }
+
+    public boolean temSemente(Semente semente){
+        //implementar que se tiver 0, ficar aparente no estoque
+        return estoque.getOrDefault(semente, MIN) > 0;
+    }
+
+    public void validarQuantidade(Integer quantidadeDesejada) {
 
         if (quantidadeDesejada == null) {
             throw new IntegerNullException("Erro: Integer está nulo.");
@@ -39,20 +68,10 @@ public class Estoque {
         }
     }
 
-    public void adicionar(Semente semente, Integer quantidade) {
-        validarQuantidade(semente, quantidade);
-        int qtdSemente = estoque.get(semente);
-
-
-    }
-
     public Map<Semente, Integer> getEstoque() {
         return Collections.unmodifiableMap(estoque);//devolve a cópia
     }
 
-    public ArrayList<Map> getEstoqueMap() {
-        return new ArrayList<>(this.estoqueMap);
-    }
 
     /*
     exemplo:
