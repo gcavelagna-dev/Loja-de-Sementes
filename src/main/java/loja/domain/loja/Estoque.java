@@ -73,7 +73,7 @@ public class Estoque {
             throw new IntegerNegativoException("Erro: O número do Integer está negativa: " + quantidadeDesejada);
         }
         if (quantidadeDesejada > MAX) {
-            throw new IntegerEstoqueAcimaException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + MAX);
+            throw new LimiteIntegerEstoqueException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + MAX);
         }
     }
 

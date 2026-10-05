@@ -1,7 +1,7 @@
 package main.java.loja.sementes.verao;
 
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Mirtilo extends Semente {
@@ -10,6 +10,11 @@ public class Mirtilo extends Semente {
 
     public Mirtilo(){
         super(Estacao.VERAO, new Moeda(valorSemente));
+    }
+
+    @Override
+    public int getValor(){
+        return valorSemente;
     }
 
 

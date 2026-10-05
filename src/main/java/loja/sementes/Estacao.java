@@ -1,4 +1,4 @@
-package main.java.loja.enums;
+package main.java.loja.sementes;
 
 public enum Estacao {
     PRIMAVERA("Primavera", 1),

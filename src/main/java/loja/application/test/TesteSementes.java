@@ -9,7 +9,7 @@ import main.java.loja.sementes.primavera.Morango;
 import main.java.loja.sementes.verao.Melao;
 import main.java.loja.sementes.verao.Mirtilo;
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Estacao;
 
 public class TesteSementes {
 

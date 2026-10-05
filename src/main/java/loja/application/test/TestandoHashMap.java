@@ -1,8 +1,10 @@
 package main.java.loja.application.test;
 
 import main.java.loja.domain.loja.Estoque;
+import main.java.loja.sementes.Semente;
 import main.java.loja.sementes.outono.Abobora;
 import main.java.loja.sementes.primavera.Batata;
+import main.java.loja.sementes.primavera.Morango;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +52,6 @@ public class TestandoHashMap {
         System.out.println("\n Testando estoque \n");
 
         Estoque estoque2 = new Estoque();
-
 
 //        estoque2.validarQuantidade(abobora, qtdAbobora);
 //        estoque2.adicionar(abobora, qtdAbobora);

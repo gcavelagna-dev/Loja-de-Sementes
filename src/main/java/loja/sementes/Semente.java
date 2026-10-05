@@ -1,24 +1,17 @@
 package main.java.loja.sementes;
 
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
 
-//abstrata para não poder ser instanciada
 public abstract class Semente {
 
-    private final Estacao estacao; //não tem static porque eu teria que definir uma estação em cada classe
-    private final Moeda preco;
+    private final Estacao estacao;
+    private Moeda preco;
 
     protected Semente(Estacao estacao, Moeda preco) {
         this.estacao = estacao;
-        this.preco = preco;
-
+        //fazer o PrecoSemente
     }
 
-    @Override
-    public String toString() {
-        return "Não faça isso...";
-    }
 
     public Estacao getEstacao() {
         return estacao;

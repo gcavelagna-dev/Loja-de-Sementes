@@ -1,7 +1,7 @@
 package main.java.loja.sementes.primavera;
 
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Batata extends Semente {
@@ -16,6 +16,11 @@ public class Batata extends Semente {
     @Override
     public String toString() {
         return "Batata: " + getValorSemente() + " ouros | Estação: " + Estacao.PRIMAVERA;
+    }
+
+    @Override
+    public int getValor() {
+        return valorSemente;
     }
 
     public int getValorSemente() {

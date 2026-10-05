@@ -7,16 +7,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Compra {
-    private final Map<Semente, Integer> sementes = new HashMap<>();
-    private final Moeda moeda;
 
-    public Compra(){
+    private final Map<Semente, Integer> sementes = new HashMap<>();
+    private Moeda moeda;
+
+    @Override
+    public String toString() {
+        return "null";
     }
 
-    public void conversao(Semente semente, Integer quantidade){
-
-        int multiplicacao = semente.getPreco() * quantidade;
-
+    public int conversao(Semente semente, Integer quantidade) {
+        int total = semente.getPreco().getOuro() * quantidade;
+        System.out.println("O total deu: " + total);
+        return total;
     }
 
 }

@@ -1,7 +1,7 @@
 package main.java.loja.sementes.inverno;
 
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class MelaoPoeira extends Semente {
@@ -12,11 +12,14 @@ public class MelaoPoeira extends Semente {
         super(Estacao.INVERNO, new Moeda(valorSemente));
     }
 
-
-
     @Override
     public String toString() {
         return "Melão-Poeira: " + getValorSemente() + " ouros | Estação: " + Estacao.INVERNO;
+    }
+
+    @Override
+    public int getValor() {
+        return valorSemente;
     }
 
     public int getValorSemente() {

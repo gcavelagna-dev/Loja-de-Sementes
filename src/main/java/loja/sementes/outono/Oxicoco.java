@@ -1,7 +1,7 @@
 package main.java.loja.sementes.outono;
 
 import main.java.loja.domain.Moeda;
-import main.java.loja.enums.Estacao;
+import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Oxicoco extends Semente {
