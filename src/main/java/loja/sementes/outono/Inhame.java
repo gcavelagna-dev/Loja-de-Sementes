@@ -1,23 +1,18 @@
 package main.java.loja.sementes.outono;
 
-import main.java.loja.domain.Moeda;
+import config.sementes.PrecoSemente;
+import config.sementes.ValidarPrecoSemente;
 import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Inhame extends Semente {
 
-    private static final int valorSemente = 60;
-
-    public Inhame() {
-        super(Estacao.OUTONO, new Moeda(valorSemente));
+    public Inhame(){
+        super(Estacao.OUTONO, new ValidarPrecoSemente(PrecoSemente.PRECO_INHAME));
     }
 
     @Override
-    public String toString() {
-        return "Inhame: " + getValorSemente() + " ouros | Estação: " + Estacao.OUTONO;
-    }
-
-    public int getValorSemente() {
-        return valorSemente;
+    protected String getNome(){
+        return "Inhame";
     }
 }

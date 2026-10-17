@@ -1,24 +1,18 @@
 package main.java.loja.sementes.verao;
 
-import main.java.loja.domain.Moeda;
+import config.sementes.PrecoSemente;
+import config.sementes.ValidarPrecoSemente;
 import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Melao extends Semente {
 
-    private static final int valorSemente = 80;
-
     public Melao(){
-        super(Estacao.VERAO, new Moeda(valorSemente));
+        super(Estacao.VERAO, new ValidarPrecoSemente(PrecoSemente.PRECO_MELAO));
     }
-
 
     @Override
-    public String toString(){
-        return "Melão: "+ getValorSemente() + " ouros | Estação: " + Estacao.VERAO;
-    }
-
-    public int getValorSemente() {
-        return valorSemente;
+    protected String getNome(){
+        return "Melão";
     }
 }

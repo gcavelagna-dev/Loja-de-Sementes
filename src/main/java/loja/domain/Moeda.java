@@ -23,8 +23,11 @@ public class Moeda {
     }
 
     public void adicionar(int valor){
-        setOuro(valor);
-        ouro += valor;
+        setOuro(ouro + valor);
+    }
+
+    public void descontar(int valor){
+        setOuro(ouro - valor);
     }
 
     public int getOuro() {

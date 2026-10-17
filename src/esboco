@@ -1,0 +1,22 @@
+O que fiz na última sessão?
+
+Da classe PrecoSemente onde havia todas as constantes de sementes,
+retirei e coloquei tudo em Configuracao, PrecoSemente ficou responsável
+pela validação do preço da semente e nenhuma constante porque em responsabilidade,
+a validação não deve conhecer o que vai ter nela, assim Configuracao ficou com todas constantes.
+
+Além disso, retirei a classe Moeda como atributo da super e subs classes, decidi que Moeda
+será uma classe para identificador de valores do jogador, como adicionar, dinheiro inicial,
+e etc. As constantes dos preços são valores inteiros, (preciso fazer um método pra cobrar o valor)
+então se eu tiver um int e passar esse int no parâmetro, logo terei o resultado.
+
+O que fazer
+
+Fazer todas as subClasses sementes, pois agora está literalmente mamão com açúcar pra terminar o resto,
+preciso fazer o método de cobrança na Moeda, X
+Fazer sistema do Inventário do Jogador(Fazer regras do Jogador, ver se precisa separar em outra classe),
+Ver se os arquivos do .gitignore estão corretamente e ver o target/,
+Fazer mais sementes,X
+Rever sistema do Estoque
+Terminar README.md(final) e colocar o que aprendi
+Ver se precisa realmente ignorar os testes(chat)

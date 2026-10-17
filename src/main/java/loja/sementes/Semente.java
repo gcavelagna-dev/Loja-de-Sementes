@@ -1,23 +1,30 @@
 package main.java.loja.sementes;
 
-import main.java.loja.domain.Moeda;
+import config.sementes.ValidarPrecoSemente;
 
 public abstract class Semente {
 
     private final Estacao estacao;
-    private Moeda preco;
+    private final ValidarPrecoSemente precoSemente;
 
-    protected Semente(Estacao estacao, Moeda preco) {
+    protected Semente(Estacao estacao, ValidarPrecoSemente precoSemente) {
         this.estacao = estacao;
-        //fazer o PrecoSemente
+        this.precoSemente = precoSemente;
     }
 
+    @Override
+    public String toString(){
+        return getNome() + ": "+ getPrecoSemente() + " ouros | Estação: " + getEstacao().getDescricao();
+    }
+
+    protected abstract String getNome();
 
     public Estacao getEstacao() {
         return estacao;
     }
 
-    public Moeda getPreco() {
-        return preco;
+    public ValidarPrecoSemente getPrecoSemente(){
+        return precoSemente;
     }
+
 }

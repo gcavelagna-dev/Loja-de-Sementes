@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Compra {
+    //ver se vai trocar pra ‘interface’
 
     private final Map<Semente, Integer> sementes = new HashMap<>();
     private Moeda moeda;
@@ -16,10 +17,10 @@ public class Compra {
         return "null";
     }
 
-    public int conversao(Semente semente, Integer quantidade) {
-        int total = semente.getPreco().getOuro() * quantidade;
-        System.out.println("O total deu: " + total);
-        return total;
-    }
+//    public int conversao(Semente semente, Integer quantidade) {
+//        int total = semente.getPreco().getOuro() * quantidade;
+//        System.out.println("O total deu: " + total);
+//        return total;
+//    }
 
 }

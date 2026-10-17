@@ -1,27 +1,21 @@
 package main.java.loja.sementes.verao;
 
-import main.java.loja.domain.Moeda;
+import config.sementes.PrecoSemente;
+import config.sementes.ValidarPrecoSemente;
 import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 
 public class Carambola extends Semente {
 
-    private static final int valorSemente = 400;
-
-
     public Carambola(){
-        super(Estacao.VERAO, new Moeda(valorSemente));
+        super(Estacao.VERAO, new ValidarPrecoSemente(PrecoSemente.PRECO_CARAMBOLA));
     }
-
 
     @Override
-    public String toString(){
-        return "Carambola: "+ getValorSemente() + " ouros | Estação: " + Estacao.VERAO;
+    protected String getNome(){
+        return "Carambola";
     }
 
-    public int getValorSemente() {
-        return valorSemente;
-    }
 }
 

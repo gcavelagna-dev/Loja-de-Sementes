@@ -1,8 +1,8 @@
 package main.java.loja.domain.loja;
 
+import config.estoque.ConfiguracaoEstoque;
 import main.java.loja.sementes.Semente;
 import main.java.loja.shared.exceptions.domain.estoque.*;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,17 +10,16 @@ import java.util.Map;
 public class Estoque {
 
     private final Map<Semente, Integer> estoque = new HashMap<>();
-    private static final int MIN = 0;
-    private static final int MAX = 500;
 
     public Estoque() {
     }
 
     @Override
     public String toString() {
-        return "\nEstoque: " +
-                estoque +
-                "\n";
+        return
+        "\nEstoque: " +
+        estoque +
+        "\n";
     }
 
     public void exibirEstoque() {
@@ -30,11 +29,10 @@ public class Estoque {
     }
 
     public void adicionar(Semente semente, Integer quantidade) {
+
         validarQuantidade(quantidade);
-
-        Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
+        Integer quantidadeAtual = estoque.getOrDefault(semente, ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE);
         Integer quantidadeFinal = quantidadeAtual + quantidade;
-
         validarQuantidade(quantidadeFinal);
 
         estoque.put(semente, quantidade);
@@ -43,12 +41,10 @@ public class Estoque {
 
     public void remover(Semente semente, Integer quantidade) {
 
-        validarQuantidade(quantidade);
-
-        if (quantidade < MIN) {
+        if (quantidade < ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE) {
             throw new IntegerRemocaoException("Erro: Remoção de número negativo");
         }
-        Integer quantidadeAtual = estoque.getOrDefault(semente, MIN);
+        Integer quantidadeAtual = estoque.getOrDefault(semente, ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE);
 
         if (quantidadeAtual < quantidade){
             throw new QuantidadeNegativaException("Erro: Estoque quantidade negativa maior que quantidade atual.");
@@ -60,8 +56,7 @@ public class Estoque {
     }
 
     public boolean temSemente(Semente semente) {
-        //implementar que se tiver 0, ficar aparente no estoque
-        return estoque.getOrDefault(semente, MIN) > 0;
+        return estoque.getOrDefault(semente, ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE) > 0;
     }
 
     public void validarQuantidade(Integer quantidadeDesejada) {
@@ -69,11 +64,11 @@ public class Estoque {
         if (quantidadeDesejada == null) {
             throw new IntegerNullException("Erro: Integer está nulo.");
         }
-        if (quantidadeDesejada < MIN) {
+        if (quantidadeDesejada < ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE) {
             throw new IntegerNegativoException("Erro: O número do Integer está negativa: " + quantidadeDesejada);
         }
-        if (quantidadeDesejada > MAX) {
-            throw new LimiteIntegerEstoqueException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + MAX);
+        if (quantidadeDesejada > ConfiguracaoEstoque.QUANTIDADE_MAX_SEMENTE) {
+            throw new LimiteIntegerEstoqueException("Erro: Quantidade final: " + quantidadeDesejada + " acima do que pode: " + ConfiguracaoEstoque.QUANTIDADE_MAX_SEMENTE);
         }
     }
 
@@ -81,12 +76,4 @@ public class Estoque {
         return Collections.unmodifiableMap(estoque);//devolve a cópia
     }
 
-
-    /*
-    exemplo:
-    estoque.adicionar(chirivia, 10);
-    estoque.remover(chirivia, 2);
-    estoque.getQuantidade(chirivia);
-    estoque.temDisponivel(chirivia);
-     */
 }

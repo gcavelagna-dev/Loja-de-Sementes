@@ -24,3 +24,8 @@ hs_err_pid*
 replay_pid*
 
 /Loja-do-Pierre/src/main/java/loja/de olho
+
+target/
+src/main/java/loja/application/test
+
+src/esboco

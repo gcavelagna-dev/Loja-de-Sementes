@@ -9,7 +9,6 @@ public enum Estacao {
     private final String descricao;
     private final int codigo;
 
-    //construtor package ou privado(Que já é por natureza implicito privado)
     Estacao(String descricao, int codigo) {
         this.descricao = descricao;
         this.codigo = codigo;
