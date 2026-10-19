@@ -7,12 +7,12 @@ import main.java.loja.sementes.Semente;
 
 public class Ruibarbo extends Semente {
 
-    public Ruibarbo(){
-        super(Estacao.PRIMAVERA, new ValidarPrecoSemente(PrecoSemente.PRECO_RUIBARBO));
+    public Ruibarbo() {
+        super(Estacao.PRIMAVERA, PrecoSemente.PRECO_RUIBARBO);
     }
 
     @Override
-    protected String getNome(){
+    protected String getNome() {
         return "Ruibarbo";
     }
 }

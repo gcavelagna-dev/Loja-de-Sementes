@@ -1,26 +1,9 @@
 package main.java.loja.domain.loja;
 
-import main.java.loja.domain.Moeda;
-import main.java.loja.sementes.Semente;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class Compra {
-    //ver se vai trocar pra ‘interface’
 
-    private final Map<Semente, Integer> sementes = new HashMap<>();
-    private Moeda moeda;
+    public void compraTotal(int total){
 
-    @Override
-    public String toString() {
-        return "null";
+// fazer a conta do getPrecoSemente * quantidade
     }
-
-//    public int conversao(Semente semente, Integer quantidade) {
-//        int total = semente.getPreco().getOuro() * quantidade;
-//        System.out.println("O total deu: " + total);
-//        return total;
-//    }
-
 }

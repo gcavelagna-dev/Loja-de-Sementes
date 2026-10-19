@@ -1,4 +1,4 @@
-package config.estoque;
+package config.domain.loja.estoque;
 
 public final class ConfiguracaoEstoque {
 

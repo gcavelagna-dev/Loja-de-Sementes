@@ -2,18 +2,17 @@ package main.java.loja.sementes.inverno;
 
 
 import config.sementes.PrecoSemente;
-import config.sementes.ValidarPrecoSemente;
 import main.java.loja.sementes.Estacao;
 import main.java.loja.sementes.Semente;
 
 public class Acafrao extends Semente {
 
-    public Acafrao(){
-        super(Estacao.INVERNO, new ValidarPrecoSemente(PrecoSemente.PRECO_ACAFRAO));
+    public Acafrao() {
+        super(Estacao.INVERNO, PrecoSemente.PRECO_ACAFRAO);
     }
 
     @Override
-    protected String getNome(){
+    protected String getNome() {
         return "Açafrão";
     }
 }

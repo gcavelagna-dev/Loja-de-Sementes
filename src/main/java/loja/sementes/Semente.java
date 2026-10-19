@@ -5,11 +5,13 @@ import config.sementes.ValidarPrecoSemente;
 public abstract class Semente {
 
     private final Estacao estacao;
-    private final ValidarPrecoSemente precoSemente;
+    private final int precoSemente;
 
-    protected Semente(Estacao estacao, ValidarPrecoSemente precoSemente) {
+    protected Semente(Estacao estacao, int precoSemente) {
+        ValidarPrecoSemente.validar(precoSemente);
         this.estacao = estacao;
         this.precoSemente = precoSemente;
+
     }
 
     @Override
@@ -23,7 +25,7 @@ public abstract class Semente {
         return estacao;
     }
 
-    public ValidarPrecoSemente getPrecoSemente(){
+    public int getPrecoSemente(){
         return precoSemente;
     }
 

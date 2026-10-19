@@ -5,14 +5,14 @@ import main.java.loja.shared.exceptions.config.semente.PrecoSementeNegativoExcep
 
 public final class ValidarPrecoSemente {
 
-    public ValidarPrecoSemente(){
+    private ValidarPrecoSemente() {
     }
 
-    public static void validar(int precoSemente){
-        if (precoSemente < PrecoSemente.PRECO_MIN_SEMENTE){
+    public static void validar(int precoSemente) {
+        if (precoSemente < PrecoSemente.PRECO_MIN_SEMENTE) {
             throw new PrecoSementeNegativoException("Erro: Preço da semente está negativa.");
         }
-        if (precoSemente > PrecoSemente.PRECO_MAX_SEMENTE){
+        if (precoSemente > PrecoSemente.PRECO_MAX_SEMENTE) {
             throw new LimitePrecoSementeException("Erro: Preço da semente ultrapassou o limite.");
         }
     }
