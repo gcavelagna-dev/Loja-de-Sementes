@@ -1,4 +1,5 @@
 package config.domain.moeda;
 
-public class ConfiguracaoMoeda {
+public final class ConfiguracaoMoeda {
+    private ConfiguracaoMoeda(){}
 }

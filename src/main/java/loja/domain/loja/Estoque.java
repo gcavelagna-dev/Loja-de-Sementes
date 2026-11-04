@@ -12,9 +12,11 @@ public class Estoque {
     private final Map<Semente, Integer> estoque = new HashMap<>();
 
     public void exibirEstoque() {
+        System.out.println("------------------------------------------------------");
         for (Map.Entry<Semente, Integer> entrada : estoque.entrySet()) {
             System.out.println(entrada.getKey() + " | Quantidade: " + entrada.getValue());
         }
+        System.out.println("------------------------------------------------------");
     }
 
     public void adicionar(Semente semente, Integer quantidade) {
@@ -48,8 +50,5 @@ public class Estoque {
         return estoque.getOrDefault(semente, ConfiguracaoEstoque.QUANTIDADE_MIN_SEMENTE) > 0;
     }
 
-    public Map<Semente, Integer> getEstoque() {
-        return Map.copyOf(estoque);
-    }
 
 }

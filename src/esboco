@@ -1,9 +1,0 @@
-O que fiz na última sessão?
-
-alterei as subclasses para aceitar o método static do ValidarPrecoSemente em vez de instanciar;
-Desenvolvi a nova ideia do Estoque, RegrasEstoque valida agora o que entra e sai no Estoque;
-Coloquei novas constantes de preços de sementes em configuração(criar novas classes);
-
-
-Fazer na próxima:
-Desenvolver a ideia da classe Moeda(continuar), fazer as validações dela;

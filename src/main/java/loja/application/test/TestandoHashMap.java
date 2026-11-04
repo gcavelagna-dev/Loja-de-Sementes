@@ -53,10 +53,6 @@ public class TestandoHashMap {
 
         Estoque estoque2 = new Estoque();
 
-//        estoque2.validarQuantidade(abobora, qtdAbobora);
-//        estoque2.adicionar(abobora, qtdAbobora);
-//        estoque2.getEstoque(abobora);
-        //usando terminal do Intellij e usando comando tree, dá para ver a estrutura completa
 
     }
 }

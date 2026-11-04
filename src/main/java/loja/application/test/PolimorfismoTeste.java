@@ -1,6 +1,5 @@
 package main.java.loja.application.test;
 
-import main.java.loja.domain.loja.Compra;
 import main.java.loja.domain.loja.Estoque;
 import main.java.loja.sementes.Semente;
 import main.java.loja.sementes.outono.Abobora;
@@ -21,16 +20,6 @@ public class PolimorfismoTeste {
         estoque.adicionar(morango, 20);
         estoque.adicionar(melao, 30);
         estoque.exibirEstoque();
-
-        Compra compra = new Compra();
-
-        compra.conversao(abobora, 20);
-        System.out.println(compra);
-
-        System.out.println(abobora.getValor());
-
-        compra.conversao(melao, 400);
-
 
     }
 }

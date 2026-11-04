@@ -19,7 +19,7 @@ public class AplicandoEstoqueSementes {
         estoque.remover(melao, 10);
         estoque.exibirEstoque();
 
-        System.out.println(morango.getPreco());
+//        System.out.println(morango.getPreco());
 
     }
 }
